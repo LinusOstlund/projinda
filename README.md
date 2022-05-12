@@ -1,0 +1,2 @@
+# projinda
+Exercises for Projinda
