@@ -4,12 +4,12 @@ Today you are going to present your MVPs and
 ## Demo
 Relevant questions are:
 
-##### Demo
+* Demo
 Show me what you got.
-##### Tech stack
+* Tech stack
 - What are you using?
 - Pros and cons so far?
-##### Worfklow & Git
+* Worfklow & Git
 - What's been difficult?
 - Project Structure
 - Analytics (in repo `Settings`)
