@@ -40,4 +40,4 @@ Unnassigned loop variables is called *magic numbers* and considered bad practice
 How is it going?
 
 ### DevOps and GitHub Actions
-Add a CI with `superlinter`.
+Add a CI with `superlinter`. Look at this [repo](https://github.com/github/super-linter)
