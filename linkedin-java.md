@@ -7,14 +7,6 @@
 - [ ] awb
 - [ ] traw
 
-**Reasoning:** The substring method is accepting two arguments.
-
-- The first argument being the index to start(includes that char at 2)
-- and the second the index of the string to end the substring(excludes the char at 5).
-- Strings in Java are like arrays of chars.
-- Therefore, the method will return "raw" as those are the chars in indexes 2,3, and 4.
-- You can also take the ending index and subtract the beginning index from it, to determine how many chars will be included in the substring (5-2=3).
-
 #### Q2. How can you achieve runtime polymorphism in Java?
 
 - [ ] method overloading
@@ -212,12 +204,6 @@ class Main {
 - [ ] It will throw an exception on line 5.
 - [ ] "123"
 
-**Explanation:** The answer is "123". The `abs()` method evaluates to the one inside mypackage.Math class, because The import statements of the form:
-
-`import packageName.subPackage.*`
-
-is [Type-Import-on-Demand Declarations](https://docs.oracle.com/javase/specs/jls/se7/html/jls-7.html#jls-7.5.2), which [never causes any other declaration to be shadowed](https://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.4.1).
-
 #### Q11. What is the result of this code?
 
 ```java
@@ -363,8 +349,6 @@ class Main {
 - [ ] 9 times
 - [ ] 5 times
 - [ ] infinite number of times
-
-**Explanation**: Observe the loop increment. It's not an increment, it's an assignment(post).
 
 #### Q22. The runtime system starts your program by calling which function first?
 
@@ -535,7 +519,6 @@ public static void badMethod() {
 - [ ] C and D
 - [ ] A and D
 
-**Explanation**: `Error` is not inherited from `Exception`
 
 #### Q34. What is the output of this code?
 
@@ -785,8 +768,6 @@ public TheClass() {
 }
 ```
 
-**Explanation:** `final` class members are allowed to be assigned only in three places: declaration, constructor or an instance-initializer block.
-
 #### Q49. How many times f will be printed?
 
 ```java
@@ -866,26 +847,6 @@ public class Solution {
 - [ ] double pi = 3.141;
 - [ ] float pi = 3.141;
 
-**Reasoning:**
-
-```java
-public class TestReal {
-    public static void main (String[] argv)
-    {
-      double pi = 3.14159265;       //accuracy up to 15 digits
-      float pi2 = 3.141F;           //accuracy up to 6-7 digits
-
-      System.out.println ("Pi=" + pi);
-      System.out.println ("Pi2=" + pi2);
-    }
-  }
-```
-
-```
-The default Java type which Java will be using for a float variable will be double.
-So, even if you declare any variable as float, what the compiler has to actually do is to assign a double value to a float variable,
-which is not possible. So, to tell the compiler to treat this value as a float, that 'F' is used.
-```
 
 #### Q57. Use the magic power to cast a spell
 
@@ -955,7 +916,6 @@ try {
 - [ ] interface
 - [ ] unsigned
 
-**Explanation:** `native` is a part of JNI interface
 
 #### Q62. Which operator would you use to find the remainder after division?
 
@@ -1190,7 +1150,6 @@ public class Main {
 - [ ] Remove the body of the `print2` method and add a semicolon.
 - [ ] Remove the body of the `print` method.
 
-**Explanation**: Changing line 2 to `public static final String message` raises the error `message not initialized in the default constructor`
 
 #### Q85. What is the output of this code?
 
@@ -1288,9 +1247,6 @@ class TaxCalculator {
 - [ ] contains unique elements
 - [ ] contains sorted elements
 
-**Explanation**: HashSet makes no guarantees as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over time.
-
-[Reference](https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html)
 
 #### Q91. What is the output?
 
@@ -1347,8 +1303,6 @@ public class Main {
 - [ ] java.util.ArrayList
 - [ ] java.util.HashSet
 - [ ] java.util.HashMap
-
-**Explanation**: HashMap class implements Map interface.
 
 #### Q96. You have a variable of named `employees` of type `List<Employee>` containing multiple entries. The `Employee` type has a method `getName()` that returns te employee name. Which statement properly extracts a list of employee names?
 
@@ -1702,8 +1656,6 @@ for (List list : myLists){
 - [ ] polymorphism
 - [ ] encapsulation
 
-**Explanation:** switch between different implementations of the `List` interface
-
 #### Q118. What does this code print?
 
 ```java
@@ -1719,8 +1671,6 @@ System.out.println(b == c);
 - [ ] false; false
 - [ ] false; true
 - [ ] true; true
-
-**Explanation:** `== operator` compares the object reference. `String a = "bikini"; String b = "bikini";` would result in True. Here new creates a new object, so false. Use `equals() method` to compare the content.
 
 #### Q119. What keyword is added to a method declaration to ensure that two threads do not simultaneously execute it on the same object instance?
 
@@ -1816,16 +1766,12 @@ dates.replaceAll(replaceSlashes);
 - [ ] `Map<String, String> replaceSlashes = dates.replace("/", "-");`
 - [ ] `Consumer<Date> replaceSlashes = date -> date.replace("/", "-");`
 
-**Explanation:** `replaceAll` method for any List<T> only accepts UnaryOperator<T> to pass every single element into it then put the result into the List<T> again.
-
 #### Q125. From which class do all other classes implicitly extend?
 
 - [ ] `Object`
 - [ ] `Main`
 - [ ] `Java`
 - [ ] `Class`
-
-[Explanation](https://stackoverflow.com/questions/17187218/default-class-that-is-extended-by-all-classes-in-java)
 
 #### Q126. How do you create and run a Thread for this class?
 
@@ -1913,14 +1859,4 @@ int total = numbers.stream()
                         .filter(x -> x % 2 == 0)
                         .mapToInt(x -> x * x)
                         .sum();
-```
-
-**Explanation:** The given code in the question will give you the output 20 as total
-
-```
-numbers                         // Input `List<Integer>` > [1, 2, 3, 4] <br>
-    .stream()                   // Converts input into `Stream<Integer>` <br>
-    .filter(x -> x % 2 == 0)    // Filter even numbers and return `Stream<Integer>` > [2, 4] <br>
-    .mapToInt(x -> x * x)       // Square the number, converts `Integer` to an `int`, and returns `IntStream` > [4, 16] <br>
-    .sum()                      // Returns the sum as `int` > 20
 ```
