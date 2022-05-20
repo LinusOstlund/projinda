@@ -2,17 +2,15 @@
 Today you are going to present your MVPs and 
 
 ## Demo
-Show me what you got.
-
-Tech stack
-- What are you using?
-- Pros and cons so far?
+Show me what you have done!
 
 Worfklow & Git
-- What's been difficult?
-- Project Structure
+- What has been more difficult than expected?
+- What has been **less** difficult than expected?
 - Analytics (in repo `Settings`)
+- What will you bära med dig for future projects?
 
+# 2nd Övning
 ## Repo review!
 From the [course syllabus](https://canvas.kth.se/courses/31105/assignments/205196):
 
@@ -41,3 +39,14 @@ How is it going?
 
 ### DevOps and GitHub Actions
 Add a CI with `superlinter`. Look at this [repo](https://github.com/github/super-linter)
+
+# Final övning
+
+Pub~~runda~~quiz!
+
+A price that will earn you social credit.
+
+:-)
+
+
+
